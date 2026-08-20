@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Terminal as TerminalIcon, Play, RotateCcw, Sparkles, Code2, Cpu, GitFork, Activity, CornerDownLeft } from "lucide-react";
+import { motion } from "framer-motion";
+import { Terminal as TerminalIcon, Play, RotateCcw, Sparkles, Code2, Cpu, GitFork, CornerDownLeft } from "lucide-react";
 import confetti from "canvas-confetti";
 import { soundManager } from "@/lib/sound";
 
@@ -46,7 +46,7 @@ export default function InteractiveSandbox() {
   const [foundIndex, setFoundIndex] = useState<number | null>(null);
   const [pointerLabels, setPointerLabels] = useState<{ low?: number; mid?: number; high?: number }>({});
   const [isRunning, setIsRunning] = useState(false);
-  const [stepText, setStepText] = useState("Select a target and click 'Run Binary Search'");
+  const [stepText, setStepText] = useState("Select a target and click 'Search Target'");
 
   // 2. Tree/Graph State
   const [activeTreeNode, setActiveTreeNode] = useState<number | null>(null);
@@ -215,24 +215,24 @@ export default function InteractiveSandbox() {
     <section id="interactive-lab" className="relative py-24 sm:py-32 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto">
       {/* Section Header */}
       <div className="flex items-center gap-3 mb-10 sm:mb-16">
-        <span className="text-[11px] font-mono text-[#5A5A5A] uppercase tracking-[0.25em]">
+        <span className="text-[11px] font-mono text-zinc-500 dark:text-[#5A5A5A] uppercase tracking-[0.25em]">
           04 // INTERACTIVE ENGINEERING LAB
         </span>
-        <div className="h-[1px] flex-1 bg-white/[0.08]" />
+        <div className="h-[1px] flex-1 bg-black/10 dark:bg-white/[0.08]" />
       </div>
 
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
         <div className="flex flex-col gap-3">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[#F5F5F5]">
-            Algorithmic <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-white to-zinc-400">Simulation Lab.</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-zinc-950 dark:text-[#F5F5F5]">
+            Algorithmic <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 dark:from-sky-400 dark:via-cyan-300 dark:to-sky-300">Simulation Lab.</span>
           </h2>
-          <p className="text-sm sm:text-base text-[#8A8A8A] max-w-xl">
+          <p className="text-sm sm:text-base text-zinc-600 dark:text-[#8A8A8A] max-w-xl">
             Live interactive simulations of binary search partitioning, binary search tree traversals, asymptotic complexity scales, and the developer shell.
           </p>
         </div>
 
         {/* 4-Tab Navigation Selector */}
-        <div className="flex flex-wrap items-center gap-1.5 p-1.5 rounded-2xl bg-[#101010] border border-white/10 shadow-lg">
+        <div className="flex flex-wrap items-center gap-1.5 p-1.5 rounded-2xl bg-zinc-100 dark:bg-[#101010] border border-zinc-200 dark:border-white/10 shadow-sm dark:shadow-lg">
           <button
             onClick={() => {
               soundManager.playStep();
@@ -240,8 +240,8 @@ export default function InteractiveSandbox() {
             }}
             className={`px-3 py-1.5 rounded-xl text-xs font-mono uppercase tracking-wider transition-all cursor-pointer ${
               activeTab === "array_algo"
-                ? "bg-sky-500 text-black font-bold shadow-[0_0_12px_rgba(56,189,248,0.4)]"
-                : "text-[#8A8A8A] hover:text-white"
+                ? "bg-zinc-950 dark:bg-sky-500 text-white dark:text-black font-bold shadow-sm dark:shadow-[0_0_12px_rgba(56,189,248,0.4)]"
+                : "text-zinc-600 dark:text-[#8A8A8A] hover:text-black dark:hover:text-white"
             }`}
           >
             Array Pointer
@@ -254,8 +254,8 @@ export default function InteractiveSandbox() {
             }}
             className={`px-3 py-1.5 rounded-xl text-xs font-mono uppercase tracking-wider transition-all cursor-pointer ${
               activeTab === "tree_graph"
-                ? "bg-sky-500 text-black font-bold shadow-[0_0_12px_rgba(56,189,248,0.4)]"
-                : "text-[#8A8A8A] hover:text-white"
+                ? "bg-zinc-950 dark:bg-sky-500 text-white dark:text-black font-bold shadow-sm dark:shadow-[0_0_12px_rgba(56,189,248,0.4)]"
+                : "text-zinc-600 dark:text-[#8A8A8A] hover:text-black dark:hover:text-white"
             }`}
           >
             BST Tree Traversal
@@ -268,8 +268,8 @@ export default function InteractiveSandbox() {
             }}
             className={`px-3 py-1.5 rounded-xl text-xs font-mono uppercase tracking-wider transition-all cursor-pointer ${
               activeTab === "big_o_radar"
-                ? "bg-sky-500 text-black font-bold shadow-[0_0_12px_rgba(56,189,248,0.4)]"
-                : "text-[#8A8A8A] hover:text-white"
+                ? "bg-zinc-950 dark:bg-sky-500 text-white dark:text-black font-bold shadow-sm dark:shadow-[0_0_12px_rgba(56,189,248,0.4)]"
+                : "text-zinc-600 dark:text-[#8A8A8A] hover:text-black dark:hover:text-white"
             }`}
           >
             Big-O Scale
@@ -282,8 +282,8 @@ export default function InteractiveSandbox() {
             }}
             className={`px-3 py-1.5 rounded-xl text-xs font-mono uppercase tracking-wider transition-all cursor-pointer ${
               activeTab === "terminal"
-                ? "bg-sky-500 text-black font-bold shadow-[0_0_12px_rgba(56,189,248,0.4)]"
-                : "text-[#8A8A8A] hover:text-white"
+                ? "bg-zinc-950 dark:bg-sky-500 text-white dark:text-black font-bold shadow-sm dark:shadow-[0_0_12px_rgba(56,189,248,0.4)]"
+                : "text-zinc-600 dark:text-[#8A8A8A] hover:text-black dark:hover:text-white"
             }`}
           >
             CLI Terminal
@@ -292,16 +292,14 @@ export default function InteractiveSandbox() {
       </div>
 
       {/* Main Lab Window Container */}
-      <div className="relative rounded-3xl bg-[#0E0E0E] border border-white/15 p-6 sm:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.7)] overflow-hidden">
-        {/* =========================================================
-            TAB 1: ARRAY & BINARY SEARCH VISUALIZER
-        ========================================================= */}
+      <div className="relative rounded-3xl bg-white dark:bg-[#0E0E0E] border border-zinc-200 dark:border-white/15 p-6 sm:p-10 shadow-xl dark:shadow-[0_20px_60px_rgba(0,0,0,0.7)] overflow-hidden">
+        {/* TAB 1: ARRAY & BINARY SEARCH VISUALIZER */}
         {activeTab === "array_algo" && (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-7 flex flex-col gap-6">
               {/* Target Picker */}
               <div className="flex items-center justify-between flex-wrap gap-3">
-                <span className="text-xs font-mono text-[#8A8A8A]">CHOOSE SEARCH TARGET:</span>
+                <span className="text-xs font-mono text-zinc-600 dark:text-[#8A8A8A] font-semibold">CHOOSE SEARCH TARGET:</span>
                 <div className="flex items-center gap-1.5">
                   {[24, 48, 68, 88].map((t) => (
                     <button
@@ -314,7 +312,7 @@ export default function InteractiveSandbox() {
                       className={`px-3 py-1 rounded-lg text-xs font-mono transition-all border cursor-pointer ${
                         targetNum === t
                           ? "bg-sky-500 text-black font-bold border-sky-400"
-                          : "bg-white/[0.04] text-zinc-300 border-white/10 hover:border-white/30"
+                          : "bg-zinc-100 dark:bg-white/[0.04] text-zinc-800 dark:text-zinc-300 border-zinc-200 dark:border-white/10 hover:border-zinc-300 dark:hover:border-white/30"
                       }`}
                     >
                       Target: {t}
@@ -324,10 +322,10 @@ export default function InteractiveSandbox() {
               </div>
 
               {/* Array Bar Display */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-[#070707] border border-white/[0.08] flex flex-col justify-between min-h-[270px]">
-                <div className="flex items-center justify-between text-xs font-mono text-[#8A8A8A] border-b border-white/5 pb-3">
+              <div className="p-6 sm:p-8 rounded-2xl bg-zinc-50 dark:bg-[#070707] border border-zinc-200 dark:border-white/[0.08] flex flex-col justify-between min-h-[270px]">
+                <div className="flex items-center justify-between text-xs font-mono text-zinc-600 dark:text-[#8A8A8A] border-b border-zinc-200 dark:border-white/5 pb-3">
                   <span>SORTED ARRAY MEMORY BUFFER</span>
-                  <span className="text-sky-400">O(log N) BINARY PARTITION</span>
+                  <span className="text-sky-600 dark:text-sky-400 font-semibold">O(log N) BINARY PARTITION</span>
                 </div>
 
                 <div className="flex items-end justify-center gap-2 sm:gap-3 py-6 h-40">
@@ -344,27 +342,27 @@ export default function InteractiveSandbox() {
                         {/* Dynamic Pointer Badges */}
                         <div className="h-5 flex items-center justify-center">
                           {isMid ? (
-                            <span className="text-[9px] font-mono font-bold text-sky-400 bg-sky-950 px-1 rounded border border-sky-600">
+                            <span className="text-[9px] font-mono font-bold text-sky-700 dark:text-sky-400 bg-sky-100 dark:bg-sky-950 px-1 rounded border border-sky-300 dark:border-sky-600">
                               MID
                             </span>
                           ) : isLow ? (
-                            <span className="text-[9px] font-mono text-zinc-400">L</span>
+                            <span className="text-[9px] font-mono text-zinc-600 dark:text-zinc-400 font-bold">L</span>
                           ) : isHigh ? (
-                            <span className="text-[9px] font-mono text-zinc-400">H</span>
+                            <span className="text-[9px] font-mono text-zinc-600 dark:text-zinc-400 font-bold">H</span>
                           ) : null}
                         </div>
 
-                        <span className="text-[10px] font-mono text-[#8A8A8A]">{val}</span>
+                        <span className="text-[10px] font-mono text-zinc-600 dark:text-[#8A8A8A] font-medium">{val}</span>
                         <motion.div
                           animate={{
                             height: `${heightPct}%`,
                             backgroundColor: isFound
                               ? "#10B981"
                               : isMid
-                              ? "#38BDF8"
+                              ? "#0284C7"
                               : isActive
                               ? "rgba(56, 189, 248, 0.4)"
-                              : "rgba(255, 255, 255, 0.1)",
+                              : "rgba(161, 161, 170, 0.3)",
                           }}
                           transition={{ type: "spring", stiffness: 300, damping: 25 }}
                           className={`w-full rounded-t-lg transition-all ${
@@ -375,16 +373,16 @@ export default function InteractiveSandbox() {
                               : ""
                           }`}
                         />
-                        <span className="text-[9px] font-mono text-[#5A5A5A]">[{idx}]</span>
+                        <span className="text-[9px] font-mono text-zinc-500 dark:text-[#5A5A5A]">[{idx}]</span>
                       </div>
                     );
                   })}
                 </div>
 
                 {/* Step feedback display */}
-                <div className="flex items-center gap-2 text-xs font-mono text-zinc-200 bg-white/[0.03] p-3 rounded-xl border border-white/5">
-                  <Sparkles size={14} className="text-sky-400 shrink-0" />
-                  <span className="truncate">{stepText}</span>
+                <div className="flex items-center gap-2 text-xs font-mono text-zinc-800 dark:text-zinc-200 bg-white dark:bg-white/[0.03] p-3 rounded-xl border border-zinc-200 dark:border-white/5 shadow-sm dark:shadow-none">
+                  <Sparkles size={14} className="text-sky-500 dark:text-sky-400 shrink-0" />
+                  <span className="truncate font-medium">{stepText}</span>
                 </div>
               </div>
 
@@ -393,7 +391,7 @@ export default function InteractiveSandbox() {
                 <button
                   onClick={runBinarySearch}
                   disabled={isRunning}
-                  className="flex-1 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs font-mono uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(56,189,248,0.3)] disabled:opacity-50 cursor-pointer"
+                  className="flex-1 py-3 rounded-xl bg-zinc-950 dark:bg-sky-500 hover:bg-zinc-800 dark:hover:bg-sky-400 text-white dark:text-black font-bold text-xs font-mono uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-sm dark:shadow-[0_0_20px_rgba(56,189,248,0.3)] disabled:opacity-50 cursor-pointer"
                 >
                   <Play size={15} />
                   <span>{isRunning ? "Partitioning Array..." : `Search Target (${targetNum})`}</span>
@@ -402,7 +400,7 @@ export default function InteractiveSandbox() {
                 <button
                   onClick={resetArray}
                   disabled={isRunning}
-                  className="p-3 rounded-xl bg-white/[0.05] hover:bg-white/10 text-[#8A8A8A] hover:text-white transition-colors border border-white/10 cursor-pointer"
+                  className="p-3 rounded-xl bg-zinc-100 dark:bg-white/[0.05] hover:bg-zinc-200 dark:hover:bg-white/10 text-zinc-600 dark:text-[#8A8A8A] hover:text-black dark:hover:text-white transition-colors border border-zinc-200 dark:border-white/10 cursor-pointer"
                   aria-label="Reset array simulation"
                 >
                   <RotateCcw size={16} />
@@ -412,9 +410,9 @@ export default function InteractiveSandbox() {
 
             {/* Right: Asymptotic Code Block */}
             <div className="lg:col-span-5 flex flex-col gap-4">
-              <div className="p-4 rounded-2xl bg-[#050505] border border-white/10 font-mono text-xs text-zinc-300 shadow-inner">
-                <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-[10px] text-[#5A5A5A]">
-                  <span className="flex items-center gap-1.5">
+              <div className="p-4 rounded-2xl bg-zinc-900 dark:bg-[#050505] border border-zinc-800 dark:border-white/10 font-mono text-xs text-zinc-300 shadow-inner">
+                <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-800 dark:border-white/10 text-[10px] text-zinc-400 dark:text-[#5A5A5A]">
+                  <span className="flex items-center gap-1.5 text-zinc-300">
                     <Code2 size={12} className="text-sky-400" />
                     C++ Binary Search Logic
                   </span>
@@ -440,15 +438,13 @@ export default function InteractiveSandbox() {
           </div>
         )}
 
-        {/* =========================================================
-            TAB 2: BST TREE / GRAPH TRAVERSAL VISUALIZER
-        ========================================================= */}
+        {/* TAB 2: BST TREE TRAVERSAL VISUALIZER */}
         {activeTab === "tree_graph" && (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-7 flex flex-col gap-6">
               {/* Target Picker */}
               <div className="flex items-center justify-between flex-wrap gap-3">
-                <span className="text-xs font-mono text-[#8A8A8A]">SELECT BST TARGET NODE:</span>
+                <span className="text-xs font-mono text-zinc-600 dark:text-[#8A8A8A] font-semibold">SELECT BST TARGET NODE:</span>
                 <div className="flex items-center gap-1.5">
                   {[12, 38, 62, 90].map((val) => (
                     <button
@@ -463,7 +459,7 @@ export default function InteractiveSandbox() {
                       className={`px-3 py-1 rounded-lg text-xs font-mono transition-all border cursor-pointer ${
                         treeSearchTarget === val
                           ? "bg-sky-500 text-black font-bold border-sky-400"
-                          : "bg-white/[0.04] text-zinc-300 border-white/10 hover:border-white/30"
+                          : "bg-zinc-100 dark:bg-white/[0.04] text-zinc-800 dark:text-zinc-300 border-zinc-200 dark:border-white/10 hover:border-zinc-300 dark:hover:border-white/30"
                       }`}
                     >
                       Node {val}
@@ -472,11 +468,11 @@ export default function InteractiveSandbox() {
                 </div>
               </div>
 
-              {/* SVG Tree Visualization Canvas */}
-              <div className="p-6 rounded-2xl bg-[#070707] border border-white/[0.08] flex flex-col justify-between min-h-[300px] relative overflow-hidden">
-                <div className="flex items-center justify-between text-xs font-mono text-[#8A8A8A] border-b border-white/5 pb-2">
+              {/* SVG Tree Canvas */}
+              <div className="p-6 rounded-2xl bg-zinc-50 dark:bg-[#070707] border border-zinc-200 dark:border-white/[0.08] flex flex-col justify-between min-h-[300px] relative overflow-hidden">
+                <div className="flex items-center justify-between text-xs font-mono text-zinc-600 dark:text-[#8A8A8A] border-b border-zinc-200 dark:border-white/5 pb-2">
                   <span>BINARY SEARCH TREE GRAPH</span>
-                  <span className="text-sky-400">DEPTH = O(log N)</span>
+                  <span className="text-sky-600 dark:text-sky-400 font-semibold">DEPTH = O(log N)</span>
                 </div>
 
                 <svg viewBox="0 0 400 230" className="w-full h-56 my-2">
@@ -492,7 +488,7 @@ export default function InteractiveSandbox() {
                         y1={fromNode.y}
                         x2={toNode.x}
                         y2={toNode.y}
-                        stroke={isTraversed ? "#38BDF8" : "rgba(255, 255, 255, 0.15)"}
+                        stroke={isTraversed ? "#0284C7" : "rgba(161, 161, 170, 0.4)"}
                         strokeWidth={isTraversed ? "2.5" : "1.5"}
                         strokeDasharray={isTraversed ? "none" : "3,3"}
                         className="transition-all duration-500"
@@ -512,15 +508,15 @@ export default function InteractiveSandbox() {
                           cx={node.x}
                           cy={node.y}
                           r={18}
-                          fill={isFound ? "#10B981" : isCurrent ? "#38BDF8" : isVisited ? "#0369A1" : "#18181B"}
-                          stroke={isFound ? "#34D399" : isCurrent ? "#00F0FF" : "rgba(255,255,255,0.2)"}
+                          fill={isFound ? "#10B981" : isCurrent ? "#0284C7" : isVisited ? "#38BDF8" : "#E4E4E7"}
+                          stroke={isFound ? "#059669" : isCurrent ? "#0369A1" : "rgba(161, 161, 170, 0.6)"}
                           strokeWidth={isCurrent ? "3" : "1.5"}
                         />
                         <text
                           x={node.x}
                           y={node.y + 4}
                           textAnchor="middle"
-                          fill={isCurrent || isFound ? "#000000" : "#FFFFFF"}
+                          fill={isCurrent || isFound || isVisited ? "#FFFFFF" : "#18181B"}
                           fontSize="11"
                           fontFamily="monospace"
                           fontWeight="bold"
@@ -532,9 +528,9 @@ export default function InteractiveSandbox() {
                   })}
                 </svg>
 
-                <div className="flex items-center gap-2 text-xs font-mono text-zinc-200 bg-white/[0.03] p-3 rounded-xl border border-white/5">
-                  <GitFork size={14} className="text-sky-400 shrink-0" />
-                  <span className="truncate">{treeStatusText}</span>
+                <div className="flex items-center gap-2 text-xs font-mono text-zinc-800 dark:text-zinc-200 bg-white dark:bg-white/[0.03] p-3 rounded-xl border border-zinc-200 dark:border-white/5">
+                  <GitFork size={14} className="text-sky-500 dark:text-sky-400 shrink-0" />
+                  <span className="truncate font-medium">{treeStatusText}</span>
                 </div>
               </div>
 
@@ -542,7 +538,7 @@ export default function InteractiveSandbox() {
               <button
                 onClick={runBstSearch}
                 disabled={isRunning}
-                className="w-full py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs font-mono uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(56,189,248,0.3)] disabled:opacity-50 cursor-pointer"
+                className="w-full py-3 rounded-xl bg-zinc-950 dark:bg-sky-500 hover:bg-zinc-800 dark:hover:bg-sky-400 text-white dark:text-black font-bold text-xs font-mono uppercase tracking-wider transition-colors flex items-center justify-center gap-2 shadow-sm dark:shadow-[0_0_20px_rgba(56,189,248,0.3)] disabled:opacity-50 cursor-pointer"
               >
                 <Play size={15} />
                 <span>{isRunning ? "Traversing Tree Nodes..." : `Traverse for Node (${treeSearchTarget})`}</span>
@@ -551,13 +547,13 @@ export default function InteractiveSandbox() {
 
             {/* Right: Explanation Block */}
             <div className="lg:col-span-5 flex flex-col gap-4">
-              <div className="p-5 rounded-2xl bg-[#090909] border border-white/[0.08] flex flex-col gap-3 text-xs font-mono">
-                <span className="text-sky-400 uppercase font-bold tracking-wider">TREE TOPOLOGY INVARIANTS</span>
-                <p className="text-[#8A8A8A] leading-relaxed">
-                  For every node \(X\), all values in left subtree are strictly \(&lt; X\), and all values in right subtree are strictly \(&gt; X\). Search complexity is proportional to tree height: \(O(h) = O(\log N)\) for balanced BSTs.
+              <div className="p-5 rounded-2xl bg-zinc-50 dark:bg-[#090909] border border-zinc-200 dark:border-white/[0.08] flex flex-col gap-3 text-xs font-mono">
+                <span className="text-sky-700 dark:text-sky-400 uppercase font-bold tracking-wider">TREE TOPOLOGY INVARIANTS</span>
+                <p className="text-zinc-600 dark:text-[#8A8A8A] leading-relaxed">
+                  For every node \(X\), all values in left subtree are strictly &lt; X, and all values in right subtree are strictly &gt; X. Search complexity is proportional to tree height: O(h) = O(log N) for balanced BSTs.
                 </p>
-                <div className="p-3 rounded-xl bg-black/40 border border-white/5 flex flex-col gap-1 text-zinc-300">
-                  <span className="text-[10px] text-[#5A5A5A]">PATHWAY RECORD</span>
+                <div className="p-3 rounded-xl bg-white dark:bg-black/40 border border-zinc-200 dark:border-white/5 flex flex-col gap-1 text-zinc-800 dark:text-zinc-300 shadow-sm dark:shadow-none">
+                  <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A] font-semibold">PATHWAY RECORD</span>
                   <span>Visited Nodes: [{visitedTreeNodes.map((id) => TREE_NODES[id].val).join(" ➔ ") || "Root"}]</span>
                 </div>
               </div>
@@ -565,20 +561,18 @@ export default function InteractiveSandbox() {
           </div>
         )}
 
-        {/* =========================================================
-            TAB 3: BIG-O ASYMPTOTIC COMPLEXITY COMPARISON
-        ========================================================= */}
+        {/* TAB 3: BIG-O ASYMPTOTIC COMPLEXITY COMPARISON */}
         {activeTab === "big_o_radar" && (
           <div className="flex flex-col gap-8">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-white/10 pb-4">
               <div className="flex flex-col">
-                <span className="text-xs font-mono text-[#F5F5F5] font-bold">ASYMPTOTIC TIME COMPLEXITY BENCHMARKS</span>
-                <span className="text-[11px] font-mono text-[#8A8A8A]">Simulated Operations per Input Size (N)</span>
+                <span className="text-xs font-mono text-zinc-950 dark:text-[#F5F5F5] font-bold">ASYMPTOTIC TIME COMPLEXITY BENCHMARKS</span>
+                <span className="text-[11px] font-mono text-zinc-500 dark:text-[#8A8A8A]">Simulated Operations per Input Size (N)</span>
               </div>
 
               {/* Scale Slider */}
               <div className="flex items-center gap-3">
-                <span className="text-xs font-mono text-sky-400">N = {inputScale.toLocaleString()} elements</span>
+                <span className="text-xs font-mono text-sky-600 dark:text-sky-400 font-semibold">N = {inputScale.toLocaleString()} elements</span>
                 <input
                   type="range"
                   min="100"
@@ -586,7 +580,7 @@ export default function InteractiveSandbox() {
                   step="100"
                   value={inputScale}
                   onChange={(e) => setInputScale(Number(e.target.value))}
-                  className="w-36 accent-sky-400 cursor-pointer"
+                  className="w-36 accent-sky-500 cursor-pointer"
                 />
               </div>
             </div>
@@ -594,71 +588,69 @@ export default function InteractiveSandbox() {
             {/* Complexity Cards Matrix */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {/* O(1) */}
-              <div className="p-5 rounded-2xl bg-[#090909] border border-emerald-500/30 flex flex-col gap-2">
+              <div className="p-5 rounded-2xl bg-emerald-50/50 dark:bg-[#090909] border border-emerald-300 dark:border-emerald-500/30 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-emerald-400 font-mono">O(1)</span>
-                  <span className="text-[9px] font-mono uppercase bg-emerald-950/60 px-2 py-0.5 rounded text-emerald-300">Constant</span>
+                  <span className="text-sm font-bold text-emerald-700 dark:text-emerald-400 font-mono">O(1)</span>
+                  <span className="text-[9px] font-mono uppercase bg-emerald-100 dark:bg-emerald-950/60 px-2 py-0.5 rounded text-emerald-800 dark:text-emerald-300 font-semibold">Constant</span>
                 </div>
-                <div className="text-xl font-bold font-mono text-white mt-1">1 op</div>
-                <p className="text-[11px] text-[#8A8A8A]">Hash Table lookup, direct array indexing.</p>
+                <div className="text-xl font-bold font-mono text-zinc-950 dark:text-white mt-1">1 op</div>
+                <p className="text-[11px] text-zinc-600 dark:text-[#8A8A8A]">Hash Table lookup, direct array indexing.</p>
               </div>
 
               {/* O(log N) */}
-              <div className="p-5 rounded-2xl bg-[#090909] border border-sky-500/30 flex flex-col gap-2">
+              <div className="p-5 rounded-2xl bg-sky-50/50 dark:bg-[#090909] border border-sky-300 dark:border-sky-500/30 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-sky-400 font-mono">O(log N)</span>
-                  <span className="text-[9px] font-mono uppercase bg-sky-950/60 px-2 py-0.5 rounded text-sky-300">Logarithmic</span>
+                  <span className="text-sm font-bold text-sky-700 dark:text-sky-400 font-mono">O(log N)</span>
+                  <span className="text-[9px] font-mono uppercase bg-sky-100 dark:bg-sky-950/60 px-2 py-0.5 rounded text-sky-800 dark:text-sky-300 font-semibold">Logarithmic</span>
                 </div>
-                <div className="text-xl font-bold font-mono text-white mt-1">
+                <div className="text-xl font-bold font-mono text-zinc-950 dark:text-white mt-1">
                   {Math.round(Math.log2(inputScale))} ops
                 </div>
-                <p className="text-[11px] text-[#8A8A8A]">Binary Search, Balanced BST traversals.</p>
+                <p className="text-[11px] text-zinc-600 dark:text-[#8A8A8A]">Binary Search, Balanced BST traversals.</p>
               </div>
 
               {/* O(N) */}
-              <div className="p-5 rounded-2xl bg-[#090909] border border-amber-500/30 flex flex-col gap-2">
+              <div className="p-5 rounded-2xl bg-amber-50/50 dark:bg-[#090909] border border-amber-300 dark:border-amber-500/30 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-amber-400 font-mono">O(N)</span>
-                  <span className="text-[9px] font-mono uppercase bg-amber-950/60 px-2 py-0.5 rounded text-amber-300">Linear</span>
+                  <span className="text-sm font-bold text-amber-700 dark:text-amber-400 font-mono">O(N)</span>
+                  <span className="text-[9px] font-mono uppercase bg-amber-100 dark:bg-amber-950/60 px-2 py-0.5 rounded text-amber-800 dark:text-amber-300 font-semibold">Linear</span>
                 </div>
-                <div className="text-xl font-bold font-mono text-white mt-1">
+                <div className="text-xl font-bold font-mono text-zinc-950 dark:text-white mt-1">
                   {inputScale.toLocaleString()} ops
                 </div>
-                <p className="text-[11px] text-[#8A8A8A]">Linear scan, Two-pointer passes (MechOnWay matching).</p>
+                <p className="text-[11px] text-zinc-600 dark:text-[#8A8A8A]">Linear scan, Two-pointer passes (MechOnWay matching).</p>
               </div>
 
               {/* O(N log N) */}
-              <div className="p-5 rounded-2xl bg-[#090909] border border-purple-500/30 flex flex-col gap-2">
+              <div className="p-5 rounded-2xl bg-purple-50/50 dark:bg-[#090909] border border-purple-300 dark:border-purple-500/30 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-purple-400 font-mono">O(N log N)</span>
-                  <span className="text-[9px] font-mono uppercase bg-purple-950/60 px-2 py-0.5 rounded text-purple-300">Linearithmic</span>
+                  <span className="text-sm font-bold text-purple-700 dark:text-purple-400 font-mono">O(N log N)</span>
+                  <span className="text-[9px] font-mono uppercase bg-purple-100 dark:bg-purple-950/60 px-2 py-0.5 rounded text-purple-800 dark:text-purple-300 font-semibold">Linearithmic</span>
                 </div>
-                <div className="text-xl font-bold font-mono text-white mt-1">
+                <div className="text-xl font-bold font-mono text-zinc-950 dark:text-white mt-1">
                   {Math.round(inputScale * Math.log2(inputScale)).toLocaleString()} ops
                 </div>
-                <p className="text-[11px] text-[#8A8A8A]">MergeSort, QuickSort, optimal comparative sorts.</p>
+                <p className="text-[11px] text-zinc-600 dark:text-[#8A8A8A]">MergeSort, QuickSort, optimal comparative sorts.</p>
               </div>
             </div>
           </div>
         )}
 
-        {/* =========================================================
-            TAB 4: INTERACTIVE CLI TERMINAL
-        ========================================================= */}
+        {/* TAB 4: INTERACTIVE CLI TERMINAL */}
         {activeTab === "terminal" && (
           <div className="flex flex-col gap-4">
-            <div className="flex items-center justify-between border-b border-white/10 pb-3 text-xs font-mono text-[#8A8A8A]">
+            <div className="flex items-center justify-between border-b border-zinc-200 dark:border-white/10 pb-3 text-xs font-mono text-zinc-600 dark:text-[#8A8A8A]">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                 <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-                <span className="ml-2 text-zinc-400">prateek-shell — v2.4 (x86_64)</span>
+                <span className="ml-2 text-zinc-700 dark:text-zinc-400 font-medium">prateek-shell — v2.4 (x86_64)</span>
               </div>
-              <span className="text-[10px] text-[#5A5A5A]">Type &apos;help&apos; for commands</span>
+              <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">Type &apos;help&apos; for commands</span>
             </div>
 
             {/* Terminal Transcript Area */}
-            <div className="p-4 rounded-2xl bg-[#050505] border border-white/[0.08] min-h-[300px] max-h-[420px] overflow-y-auto font-mono text-xs flex flex-col gap-3 no-scrollbar">
+            <div className="p-4 rounded-2xl bg-zinc-950 border border-zinc-800 dark:border-white/[0.08] min-h-[300px] max-h-[420px] overflow-y-auto font-mono text-xs flex flex-col gap-3 no-scrollbar">
               <div className="text-zinc-500">
                 Type commands like &apos;skills&apos;, &apos;dsa&apos;, &apos;projects&apos;, &apos;education&apos;, or &apos;sudo hire&apos; below.
               </div>
@@ -669,7 +661,7 @@ export default function InteractiveSandbox() {
                     <span className="text-emerald-400">prateek@dev:~$</span>
                     <span className="text-white font-semibold">{item.cmd}</span>
                   </div>
-                  <div className="text-[#A1A1AA] pl-4 leading-relaxed whitespace-pre-wrap border-l border-white/10">
+                  <div className="text-[#A1A1AA] pl-4 leading-relaxed whitespace-pre-wrap border-l border-zinc-800">
                     {item.out}
                   </div>
                 </div>
@@ -679,7 +671,7 @@ export default function InteractiveSandbox() {
 
             {/* Input Bar */}
             <form onSubmit={handleTerminalSubmit} className="flex items-center gap-2">
-              <div className="flex-1 flex items-center gap-2 px-4 py-3 rounded-xl bg-[#050505] border border-white/10 focus-within:border-sky-400 transition-colors">
+              <div className="flex-1 flex items-center gap-2 px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 focus-within:border-sky-400 transition-colors">
                 <span className="text-emerald-400 font-mono text-xs">prateek@dev:~$</span>
                 <input
                   type="text"
@@ -692,7 +684,7 @@ export default function InteractiveSandbox() {
 
               <button
                 type="submit"
-                className="px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs font-mono uppercase tracking-wider transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-black font-bold text-xs font-mono uppercase tracking-wider transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm"
               >
                 <span>Execute</span>
                 <CornerDownLeft size={13} />

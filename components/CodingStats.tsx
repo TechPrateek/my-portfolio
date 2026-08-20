@@ -69,7 +69,7 @@ export default function CodingStats() {
 
       <div className="flex flex-col gap-4 mb-14 sm:mb-18">
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[-0.03em] text-zinc-950 dark:text-[#F5F5F5]">
-          BUILT THROUGH <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 dark:from-sky-400 via-zinc-800 dark:via-white to-zinc-500 dark:to-zinc-400">PROBLEM SOLVING.</span>
+          BUILT THROUGH <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 dark:from-sky-400 dark:via-cyan-300 dark:to-sky-300">PROBLEM SOLVING.</span>
         </h2>
         <p className="text-sm sm:text-base text-zinc-600 dark:text-[#8A8A8A] max-w-2xl">
           Continuous algorithmic training to cultivate structural intuition, mathematical precision, and edge-case resilience across competitive platforms.

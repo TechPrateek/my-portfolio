@@ -87,7 +87,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.9, delay: 0.45, ease: LUXURY_EASE }}
-              className="text-[14vw] sm:text-[11vw] lg:text-[7.5rem] font-bold text-transparent bg-clip-text bg-gradient-to-r dark:from-[#F5F5F5] dark:via-[#D4D4D8] dark:to-[#71717A] from-zinc-950 via-zinc-800 to-zinc-500"
+              className="text-[14vw] sm:text-[11vw] lg:text-[7.5rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-sky-500 to-cyan-500 dark:from-sky-400 dark:via-cyan-300 dark:to-sky-300"
             >
               YADAV
             </motion.h1>
