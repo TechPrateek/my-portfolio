@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prateek Yadav — Developer Portfolio
 
-## Getting Started
+Welcome to my personal developer portfolio 🚀
 
-First, run the development server:
+I'm **Prateek Yadav**, a B.Tech student and software developer focused on **Data Structures & Algorithms, C++, Java, Python, and modern web development**.
+
+This portfolio showcases my projects, technical skills, coding journey, achievements, and experience.
+
+## 🌐 Portfolio
+
+**Live Website:** Add your deployed portfolio URL here
+
+## 👨‍💻 About Me
+
+* 🎓 B.Tech Computer Science student
+* 💻 Interested in Software Development and Problem Solving
+* 🧠 Focused on Data Structures & Algorithms
+* 🚀 Building practical, real-world projects
+* 🎨 Part-time freelancer in brand/design work
+* 📚 Continuously learning new technologies
+
+## 🛠️ Tech Stack
+
+### Languages
+
+* C++
+* Java
+* Python
+* C
+
+### Development
+
+* Next.js
+* React
+* TypeScript
+* Node.js
+* Prisma
+* PostgreSQL
+
+### Tools
+
+* Git
+* GitHub
+* VS Code
+* Vercel
+
+### Core Skills
+
+* Data Structures & Algorithms
+* Object-Oriented Programming
+* Database Management
+* Problem Solving
+* Web Development
+
+## 🚀 Featured Projects
+
+### PhysioConnect
+
+A modern platform for discovering and booking physiotherapy services.
+
+**Technologies:** Next.js, TypeScript, Prisma, PostgreSQL
+
+Key features include:
+
+* Patient and physiotherapist workflows
+* Role-based authentication
+* Booking management
+* Service requests
+* Payment integration
+* Admin dashboard
+* Responsive modern UI
+
+### MechOnWay
+
+An on-demand roadside assistance platform designed to connect users with nearby verified mechanics.
+
+**Key features:**
+
+* GPS-based location capture
+* Nearby mechanic matching
+* Real-time assistance tracking
+* Transparent pricing
+* Secure authentication
+* Admin management system
+
+## 🏆 Coding Achievements
+
+* Solved **350+ programming problems** across competitive programming platforms
+* Solved **190+ problems on LeetCode**
+* Maximum LeetCode contest rating: **1548**
+* Regularly practice Data Structures & Algorithms
+* Participate in competitive programming contests
+
+## 📊 Coding Profiles
+
+* **LeetCode:** Add your profile link
+* **Codeforces:** Add your profile link
+* **CodeChef:** Add your profile link
+* **Codolio:** Add your profile link
+
+## 📫 Connect With Me
+
+* **GitHub:** Add your GitHub profile
+* **LinkedIn:** Add your LinkedIn profile
+* **LeetCode:** Add your LeetCode profile
+* **Portfolio:** Add your portfolio URL
+
+## ⚡ Running Locally
+
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
+cd <project-folder>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Build for Production
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This portfolio can be deployed easily using Vercel.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Built with ❤️ by Prateek Yadav
