@@ -1,117 +1,164 @@
 # Prateek Yadav — Developer Portfolio
 
-Welcome to my personal developer portfolio 🚀
+> Personal portfolio of **Prateek Yadav**, a B.Tech Computer Science student focused on software development, Data Structures & Algorithms, competitive programming, and modern full-stack engineering.
 
-I'm **Prateek Yadav**, a B.Tech student and software developer focused on **Data Structures & Algorithms, C++, Java, Python, and modern web development**.
+## 🌐 Live Portfolio
 
-This portfolio showcases my projects, technical skills, coding journey, achievements, and experience.
+### 🚀 [Visit My Portfolio](https://my-portfolio-eight-tan-29.vercel.app/)
 
-## 🌐 Portfolio
-
-**Live Website:** Add your deployed portfolio URL here
+---
 
 ## 👨‍💻 About Me
 
-* 🎓 B.Tech Computer Science student
-* 💻 Interested in Software Development and Problem Solving
-* 🧠 Focused on Data Structures & Algorithms
-* 🚀 Building practical, real-world projects
-* 🎨 Part-time freelancer in brand/design work
-* 📚 Continuously learning new technologies
+I'm **Prateek Yadav**, a B.Tech Computer Science & Engineering student and software developer passionate about **problem solving, algorithms, and building practical software products**.
 
-## 🛠️ Tech Stack
+My primary areas of interest include:
+
+* 💻 Software Development
+* 🧠 Data Structures & Algorithms
+* 🏁 Competitive Programming
+* 🌐 Full-Stack Web Development
+* 🗄️ Backend & Database Engineering
+* 🚀 Building real-world applications
+
+---
+
+## 🛠️ Technology Stack
 
 ### Languages
 
 * C++
 * Java
 * Python
+* JavaScript
+* TypeScript
 * C
 
-### Development
+### Web & Backend
 
 * Next.js
 * React
-* TypeScript
 * Node.js
+* TypeScript
 * Prisma
 * PostgreSQL
+* Tailwind CSS
 
-### Tools
+### Core Skills
+
+* Data Structures & Algorithms
+* Object-Oriented Programming
+* Problem Solving
+* Database Management
+* Full-Stack Development
+* API Development
+
+### Tools & Platforms
 
 * Git
 * GitHub
 * VS Code
 * Vercel
 
-### Core Skills
-
-* Data Structures & Algorithms
-* Object-Oriented Programming
-* Database Management
-* Problem Solving
-* Web Development
+---
 
 ## 🚀 Featured Projects
 
-### PhysioConnect
-
-A modern platform for discovering and booking physiotherapy services.
-
-**Technologies:** Next.js, TypeScript, Prisma, PostgreSQL
-
-Key features include:
-
-* Patient and physiotherapist workflows
-* Role-based authentication
-* Booking management
-* Service requests
-* Payment integration
-* Admin dashboard
-* Responsive modern UI
-
-### MechOnWay
+### 🔧 MechOnWay
 
 An on-demand roadside assistance platform designed to connect users with nearby verified mechanics.
 
-**Key features:**
+**Key Features**
 
 * GPS-based location capture
 * Nearby mechanic matching
 * Real-time assistance tracking
 * Transparent pricing
 * Secure authentication
+* Service management
 * Admin management system
+
+**Tech Stack**
+
+`Next.js` `TypeScript` `Node.js` `PostgreSQL` `Prisma` `Tailwind CSS`
+
+---
+
+### 🩺 PhysioConnect
+
+A digital physiotherapy platform designed to connect patients with physiotherapists and simplify appointment and treatment workflows.
+
+**Key Features**
+
+* Patient and physiotherapist workflows
+* Role-based authentication
+* Appointment booking
+* Service requests
+* Payment integration
+* Admin dashboard
+* Responsive modern UI/UX
+
+**Tech Stack**
+
+`Next.js` `TypeScript` `Prisma` `PostgreSQL` `Razorpay` `Tailwind CSS`
+
+---
 
 ## 🏆 Coding Achievements
 
-* Solved **350+ programming problems** across competitive programming platforms
-* Solved **190+ problems on LeetCode**
-* Maximum LeetCode contest rating: **1548**
-* Regularly practice Data Structures & Algorithms
-* Participate in competitive programming contests
+* 🧩 Solved **350+ programming problems** across competitive programming platforms
+* 💻 Solved **200+ problems on LeetCode**
+* 📈 Maximum LeetCode contest rating: **1548**
+* 🏁 Regularly participate in competitive programming
+* 🧠 Consistently practice Data Structures & Algorithms
+
+---
 
 ## 📊 Coding Profiles
 
-* **LeetCode:** Add your profile link
-* **Codeforces:** Add your profile link
-* **CodeChef:** Add your profile link
-* **Codolio:** Add your profile link
+| Platform    | Profile                                                       |
+| ----------- | ------------------------------------------------------------- |
+| 🟠 LeetCode | [TechPrateek](https://leetcode.com/u/TechPrateek/)            |
+| 🟢 Codolio  | [MasterPrateek](https://codolio.com/profile/MasterPrateek)    |
+| ⚫ GitHub    | [TechPrateek](https://github.com/TechPrateek)                 |
+| 🔵 LinkedIn | [Prateek Yadav](https://www.linkedin.com/in/prateekyadav360/) |
 
-## 📫 Connect With Me
+---
 
-* **GitHub:** Add your GitHub profile
-* **LinkedIn:** Add your LinkedIn profile
-* **LeetCode:** Add your LeetCode profile
-* **Portfolio:** Add your portfolio URL
+## 📈 GitHub
 
-## ⚡ Running Locally
+I use GitHub to build, maintain, and share my projects and coding solutions.
+
+**[View GitHub Profile →](https://github.com/TechPrateek)**
+
+---
+
+## 🎓 Education
+
+### B.Tech — Computer Science & Engineering
+
+**Galgotias College of Engineering and Technology**
+
+**2024 – 2028**
+
+Focused on:
+
+* Data Structures & Algorithms
+* Object-Oriented Programming
+* Database Management
+* Operating Systems
+* Computer Networks
+* Software Development
+
+---
+
+## 💻 Run Locally
 
 Clone the repository:
 
 ```bash
-git clone <your-repository-url>
-cd <project-folder>
+git clone https://github.com/TechPrateek/my-portfolio.git
+cd my-portfolio
 ```
 
 Install dependencies:
@@ -132,17 +179,34 @@ Open:
 http://localhost:3000
 ```
 
-## 📦 Build for Production
-
-```bash
-npm run build
-npm start
-```
+---
 
 ## 🚀 Deployment
 
-This portfolio can be deployed easily using Vercel.
+This portfolio is deployed using **Vercel**.
+
+### Live Website
+
+**https://my-portfolio-eight-tan-29.vercel.app/**
+
+---
+
+## 📬 Connect With Me
+
+* 🌐 **Portfolio:** https://my-portfolio-eight-tan-29.vercel.app/
+* 💻 **GitHub:** https://github.com/TechPrateek
+* 💼 **LinkedIn:** https://www.linkedin.com/in/prateekyadav360/
+* 🧠 **LeetCode:** https://leetcode.com/u/TechPrateek/
+* 📊 **Codolio:** https://codolio.com/profile/MasterPrateek
+
+---
+
+## ⭐ Support
+
+If you find this portfolio interesting, consider giving the repository a ⭐.
 
 ---
 
 ### Built with ❤️ by Prateek Yadav
+
+**Next.js · TypeScript · React · Tailwind CSS · Vercel**
