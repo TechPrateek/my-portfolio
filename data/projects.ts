@@ -44,6 +44,7 @@ export const projects: Project[] = [
       "Real-time SVG graph visualizer mapping cross-account device fingerprint clusters",
     ],
     techStack: ["Next.js", "TypeScript", "Python", "FastAPI", "LightGBM", "PostgreSQL", "Prisma", "Tailwind CSS"],
+    liveUrl: "https://paypilotai.vercel.app",
     githubUrl: "https://github.com/TechPrateek/paypilotai",
     year: "2025",
     accentGlow: "rgba(56, 189, 248, 0.18)",
