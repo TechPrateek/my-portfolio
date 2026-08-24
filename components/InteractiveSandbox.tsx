@@ -183,7 +183,7 @@ export default function InteractiveSandbox() {
         output = "LeetCode: 190+ Solved (1548 Peak Rating) | Total: 350+ Problems across LeetCode, Codolio, Codeforces, GFG.";
         break;
       case "projects":
-        output = "1. MechOnWay: On-demand roadside assistance with geolocation matching | 2. PhysioConnect: Healthcare clinical workflow portal.";
+        output = "1. PayPilot AI: Intelligent real-time payment risk & fraud detection platform with Graph ML | 2. PhysioConnect: Healthcare clinical workflow & tele-rehab portal.";
         break;
       case "education":
         output = "B.Tech in Computer Science & Engineering (2024–2028) at Galgotias College of Engineering and Technology.";
@@ -618,7 +618,7 @@ export default function InteractiveSandbox() {
                 <div className="text-xl font-bold font-mono text-zinc-950 dark:text-white mt-1">
                   {inputScale.toLocaleString()} ops
                 </div>
-                <p className="text-[11px] text-zinc-600 dark:text-[#8A8A8A]">Linear scan, Two-pointer passes (MechOnWay matching).</p>
+                <p className="text-[11px] text-zinc-600 dark:text-[#8A8A8A]">Linear scan, single-pass behavioral velocity extraction (PayPilot AI).</p>
               </div>
 
               {/* O(N log N) */}

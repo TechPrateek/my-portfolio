@@ -94,36 +94,36 @@ export default function ProjectCard({ project, index, onOpenModal }: ProjectCard
 
           {/* Interactive Graphic / Blueprint Representation */}
           <div className="my-auto py-8 relative flex items-center justify-center">
-            {project.id === "mechonway" ? (
-              // MechOnWay Visual Concept Component
+            {project.id === "paypilotai" ? (
+              // PayPilot AI Visual Concept Component
               <div className="relative w-full max-w-sm flex flex-col gap-3 p-5 rounded-2xl bg-white dark:bg-[#121212]/90 border border-zinc-200 dark:border-white/10 shadow-lg dark:shadow-2xl backdrop-blur-md">
                 <div className="flex items-center justify-between border-b border-zinc-200 dark:border-white/[0.08] pb-3">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-sky-500 animate-ping" />
-                    <span className="text-xs font-mono font-semibold text-zinc-900 dark:text-[#F5F5F5]">GEO-DISPATCH ENGINE</span>
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                    <span className="text-xs font-mono font-semibold text-zinc-950 dark:text-[#F5F5F5]">AI FRAUD RISK ENGINE</span>
                   </div>
-                  <span className="text-[10px] font-mono text-sky-600 dark:text-sky-400 bg-sky-50 dark:bg-sky-950/60 px-2 py-0.5 rounded border border-sky-200 dark:border-sky-800/50 font-medium">
-                    MATCHING
+                  <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800/50 font-medium">
+                    RISK: 08 (LOW)
                   </span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 text-xs font-mono text-zinc-600 dark:text-[#8A8A8A]">
                   <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-black/40 border border-zinc-200 dark:border-white/5 flex flex-col">
-                    <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">USER LAT/LONG</span>
-                    <span className="text-zinc-900 dark:text-zinc-300 font-medium">28.6139° N, 77.2090° E</span>
+                    <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">TRANSACTION EVAL</span>
+                    <span className="text-zinc-900 dark:text-zinc-300 font-medium">₹14,500 • UPI Fast</span>
                   </div>
                   <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-black/40 border border-zinc-200 dark:border-white/5 flex flex-col">
-                    <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">NEAREST MECHANIC</span>
-                    <span className="text-zinc-900 dark:text-zinc-300 font-medium">1.2 km away • 4 min</span>
+                    <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">GRAPH CLUSTERING</span>
+                    <span className="text-zinc-900 dark:text-zinc-300 font-medium">0 Fraud Nodes Linked</span>
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-[#8A8A8A] pt-1">
                   <span className="flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400 font-medium">
-                    <ShieldCheck size={13} className="text-emerald-500" />
-                    Verified Partner Network
+                    <ShieldCheck size={13} className="text-sky-500" />
+                    Hybrid LightGBM + Graph ML
                   </span>
-                  <span className="text-zinc-900 dark:text-white font-medium">Auto-Routed</span>
+                  <span className="text-emerald-600 dark:text-emerald-400 font-semibold uppercase">Auto-Approved</span>
                 </div>
               </div>
             ) : (

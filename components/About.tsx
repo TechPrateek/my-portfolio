@@ -49,7 +49,7 @@ export default function About() {
 
           <ScrollReveal delay={0.3}>
             <p className="text-sm sm:text-base text-zinc-600 dark:text-[#8A8A8A] leading-relaxed font-normal">
-              Whether architecting full-stack systems like on-demand geolocation dispatchers or optimizing algorithmic solutions under strict contest time limits, the goal remains identical: clean code, provable correctness, and deliberate design.
+              Whether architecting full-stack systems like real-time FinTech AI fraud engines or optimizing algorithmic solutions under strict contest time limits, the goal remains identical: clean code, provable correctness, and deliberate design.
             </p>
           </ScrollReveal>
 
