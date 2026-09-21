@@ -52,7 +52,7 @@ export default function Projects() {
         </div>
 
         <div className="text-xs font-mono text-zinc-400 dark:text-[#5A5A5A] hidden sm:block">
-          TOTAL 02 PRODUCTION CASE STUDIES
+          TOTAL 05 PRODUCTION CASE STUDIES
         </div>
       </div>
 

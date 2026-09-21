@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, ExternalLink, ShieldCheck, Activity, Layers } from "lucide-react";
+import { ArrowUpRight, ExternalLink, ShieldCheck, Activity, Layers, ShieldAlert, Cpu, Bot, Zap } from "lucide-react";
 import { Project } from "@/data/projects";
 import { LUXURY_EASE } from "@/lib/animations";
 import { GithubIcon } from "./icons/BrandIcons";
@@ -126,13 +126,77 @@ export default function ProjectCard({ project, index, onOpenModal }: ProjectCard
                   <span className="text-emerald-600 dark:text-emerald-400 font-semibold uppercase">Auto-Approved</span>
                 </div>
               </div>
-            ) : (
+            ) : project.id === "scamguardai" ? (
+              // ScamGuardAi Visual Concept Component
+              <div className="relative w-full max-w-sm flex flex-col gap-3 p-5 rounded-2xl bg-white dark:bg-[#121212]/90 border border-zinc-200 dark:border-white/10 shadow-lg dark:shadow-2xl backdrop-blur-md">
+                <div className="flex items-center justify-between border-b border-zinc-200 dark:border-white/[0.08] pb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
+                    <span className="text-xs font-mono font-semibold text-zinc-950 dark:text-[#F5F5F5]">ABUSE-RING SENTINEL</span>
+                  </div>
+                  <span className="text-[10px] font-mono text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/60 px-2 py-0.5 rounded border border-rose-200 dark:border-rose-800/50 font-medium">
+                    PROB: 98.4% (QUARANTINE)
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 text-xs font-mono text-zinc-600 dark:text-[#8A8A8A]">
+                  <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-black/40 border border-zinc-200 dark:border-white/5 flex flex-col">
+                    <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">BFS GRAPH TOPOLOGY</span>
+                    <span className="text-zinc-900 dark:text-zinc-300 font-medium">6 Coordinated Accounts</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-black/40 border border-zinc-200 dark:border-white/5 flex flex-col">
+                    <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">10D ML ATTRIBUTION</span>
+                    <span className="text-zinc-900 dark:text-zinc-300 font-medium">Burst Velocity + Shared IP</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-[#8A8A8A] pt-1">
+                  <span className="flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400 font-medium">
+                    <ShieldAlert size={13} className="text-rose-500" />
+                    Razorpay Buildathon 2026
+                  </span>
+                  <span className="text-rose-600 dark:text-rose-400 font-semibold uppercase">Action: Ring Quarantined</span>
+                </div>
+              </div>
+            ) : project.id === "llmreliabilitylab" ? (
+              // LLM Reliability Lab Visual Concept Component
+              <div className="relative w-full max-w-sm flex flex-col gap-3 p-5 rounded-2xl bg-white dark:bg-[#121212]/90 border border-zinc-200 dark:border-white/10 shadow-lg dark:shadow-2xl backdrop-blur-md">
+                <div className="flex items-center justify-between border-b border-zinc-200 dark:border-white/[0.08] pb-3">
+                  <div className="flex items-center gap-2">
+                    <Bot size={14} className="text-purple-500" />
+                    <span className="text-xs font-mono font-semibold text-zinc-950 dark:text-[#F5F5F5]">LLM RED-TEAMING ARENA</span>
+                  </div>
+                  <span className="text-[10px] font-mono text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-950/60 px-2 py-0.5 rounded border border-purple-200 dark:border-purple-800/50 font-medium">
+                    MRI™: 94/100
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 text-xs font-mono text-zinc-600 dark:text-[#8A8A8A]">
+                  <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-black/40 border border-zinc-200 dark:border-white/5 flex flex-col">
+                    <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">GEMINI vs DEEPSEEK</span>
+                    <span className="text-zinc-900 dark:text-zinc-300 font-medium">TTFT: 142ms • $0.0004/turn</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-black/40 border border-zinc-200 dark:border-white/5 flex flex-col">
+                    <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">JAILBREAK STRESS</span>
+                    <span className="text-zinc-900 dark:text-zinc-300 font-medium">0 Delimiter Leakage</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-[#8A8A8A] pt-1">
+                  <span className="flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400 font-medium">
+                    <Zap size={13} className="text-purple-500" />
+                    NIST AI RMF & EU AI Act
+                  </span>
+                  <span className="text-purple-600 dark:text-purple-400 font-semibold uppercase">Nutrition Label PDF</span>
+                </div>
+              </div>
+            ) : project.id === "physioconnect" ? (
               // PhysioConnect Visual Concept Component
               <div className="relative w-full max-w-sm flex flex-col gap-3 p-5 rounded-2xl bg-white dark:bg-[#121212]/90 border border-zinc-200 dark:border-white/10 shadow-lg dark:shadow-2xl backdrop-blur-md">
                 <div className="flex items-center justify-between border-b border-zinc-200 dark:border-white/[0.08] pb-3">
                   <div className="flex items-center gap-2">
                     <Activity size={14} className="text-emerald-500" />
-                    <span className="text-xs font-mono font-semibold text-zinc-900 dark:text-[#F5F5F5]">CLINICAL REHAB PORTAL</span>
+                    <span className="text-xs font-mono font-semibold text-zinc-950 dark:text-[#F5F5F5]">CLINICAL REHAB PORTAL</span>
                   </div>
                   <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800/50 font-medium">
                     RECOVERY 86%
@@ -158,6 +222,38 @@ export default function ProjectCard({ project, index, onOpenModal }: ProjectCard
                   <span className="text-zinc-900 dark:text-white font-medium">Encrypted Telemetry</span>
                 </div>
               </div>
+            ) : (
+              // MechOnWay Visual Concept Component
+              <div className="relative w-full max-w-sm flex flex-col gap-3 p-5 rounded-2xl bg-white dark:bg-[#121212]/90 border border-zinc-200 dark:border-white/10 shadow-lg dark:shadow-2xl backdrop-blur-md">
+                <div className="flex items-center justify-between border-b border-zinc-200 dark:border-white/[0.08] pb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-amber-500 animate-ping" />
+                    <span className="text-xs font-mono font-semibold text-zinc-950 dark:text-[#F5F5F5]">GEO-DISPATCH ENGINE</span>
+                  </div>
+                  <span className="text-[10px] font-mono text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800/50 font-medium">
+                    MATCHING
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 text-xs font-mono text-zinc-600 dark:text-[#8A8A8A]">
+                  <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-black/40 border border-zinc-200 dark:border-white/5 flex flex-col">
+                    <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">USER LAT/LONG</span>
+                    <span className="text-zinc-900 dark:text-zinc-300 font-medium">28.6139° N, 77.2090° E</span>
+                  </div>
+                  <div className="p-2.5 rounded-lg bg-zinc-50 dark:bg-black/40 border border-zinc-200 dark:border-white/5 flex flex-col">
+                    <span className="text-[10px] text-zinc-400 dark:text-[#5A5A5A]">NEAREST MECHANIC</span>
+                    <span className="text-zinc-900 dark:text-zinc-300 font-medium">1.2 km away • 4 min</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-[#8A8A8A] pt-1">
+                  <span className="flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400 font-medium">
+                    <ShieldCheck size={13} className="text-amber-500" />
+                    Verified Partner Network
+                  </span>
+                  <span className="text-zinc-900 dark:text-white font-medium">Auto-Routed</span>
+                </div>
+              </div>
             )}
           </div>
 
@@ -166,7 +262,7 @@ export default function ProjectCard({ project, index, onOpenModal }: ProjectCard
             {project.metrics.map((m, i) => (
               <div key={i} className="flex flex-col">
                 <span className="text-[10px] font-mono text-zinc-400 dark:text-[#5A5A5A] uppercase">{m.label}</span>
-                <span className="text-xs font-mono font-semibold text-zinc-900 dark:text-[#F5F5F5]">{m.value}</span>
+                <span className="text-xs font-mono font-semibold text-zinc-950 dark:text-[#F5F5F5]">{m.value}</span>
               </div>
             ))}
           </div>

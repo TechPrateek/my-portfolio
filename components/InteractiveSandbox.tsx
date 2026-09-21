@@ -183,7 +183,7 @@ export default function InteractiveSandbox() {
         output = "LeetCode: 190+ Solved (1548 Peak Rating) | Total: 350+ Problems across LeetCode, Codolio, Codeforces, GFG.";
         break;
       case "projects":
-        output = "1. PayPilot AI: Intelligent real-time payment risk & fraud detection platform with Graph ML | 2. PhysioConnect: Healthcare clinical workflow & tele-rehab portal.";
+        output = "1. PayPilot AI (FinTech Risk & Graph ML) | 2. ScamGuardAi (Abuse-Ring Sentinel & 10D ML) | 3. LLM Reliability Lab (AI Red-Teaming Arena) | 4. PhysioConnect (Healthcare Tele-Rehab) | 5. MechOnWay (Geo-Dispatch Platform)";
         break;
       case "education":
         output = "B.Tech in Computer Science & Engineering (2024–2028) at Galgotias College of Engineering and Technology.";
