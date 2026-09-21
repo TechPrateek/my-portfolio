@@ -192,6 +192,7 @@ export const projects: Project[] = [
       "Optimistic UI updates for high reliability under weak network conditions",
     ],
     techStack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Prisma", "Tailwind CSS"],
+    liveUrl: "https://main.d1vqbdcnkkxe6z.amplifyapp.com/",
     githubUrl: "https://github.com/TechPrateek/MechOnWay",
     year: "2025",
     accentGlow: "rgba(245, 158, 11, 0.18)",
